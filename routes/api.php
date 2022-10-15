@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\ProductController as ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +14,5 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-// Route::get('/test', function () {
-//     return 'test';
-// });
+
 Route::apiResource('products', \App\Http\Controllers\ProductController::class)->only(['index', 'show', 'store']);
