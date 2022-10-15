@@ -32,7 +32,7 @@ class ProductController extends Controller
     {
         $validatedData = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
-            'price' => 'required|numeric',
+            'price' => 'required|numeric|regex:/^(([0-9]*)(\.([0-9]{0,2}+))?)$/',
             'description' => 'required|string'
         ]);
 
